@@ -1,0 +1,232 @@
+from math import ceil, floor
+
+from tqz_strategy.template import CtaTemplate
+from public_module.object import BarData, RenkoData
+from public_module.constant import RenkoDirection
+from public_module.utility import BarGenerator
+
+class TQZFutureRenkoScalpingAutoFundManageStrategy(CtaTemplate):
+    """
+    future strategy(1h period).
+    """
+    author = "tqz"
+
+    # --- param part ---
+    fast_window = 10
+    slow_window = 60
+
+    min_tick_price_flow = 0
+    contract_multiple = 0
+    strategy_fund = 0
+
+    parameters = ["fast_window", "slow_window", "strategy_fund", "min_tick_price_flow", "contract_multiple"]
+
+    # --- var part ---
+    pre_ma_direction = RenkoDirection.NO
+    current_ma_direction = RenkoDirection.NO
+
+    variables = ["pre_ma_direction", "current_ma_direction"]
+
+    def __init__(self, cta_engine, strategy_name, vt_symbol, setting):
+        """"""
+        super().__init__(cta_engine, strategy_name, vt_symbol, setting)
+
+        self.lots_size = 0
+        self.renko_size = 0
+
+        self.bg = BarGenerator(self.on_bar)
+
+        self.history_bars = []  # slow_window bars
+        self.bar_close_prices = []  # all bars
+        self.renko_list = []
+
+        self.first_bar_close_price = 0
+
+
+    def on_bar(self, bar: BarData):
+        """
+        Callback of new bar data update.
+        """
+
+        # 1. update self.bars_close_prices & update params.
+        if self.__update_params_ok(new_bar=bar) is False:
+            return
+
+        # 2. modify postion.
+        last_renko0 = self.renko_list[-1]
+        last_renko1 = self.renko_list[-2]
+        if self.current_ma_direction == RenkoDirection.LONG:
+            if self.pos == 0:
+                if last_renko1.renko_direction == RenkoDirection.SHORT and last_renko0.renko_direction == RenkoDirection.LONG:
+                    self.set_position(pos=self.lots_size)
+
+            elif self.pos < 0:
+                if last_renko1.renko_direction == RenkoDirection.SHORT and last_renko0.renko_direction == RenkoDirection.LONG:
+                    self.set_position(pos=self.lots_size)
+                else:
+                    self.set_position(pos=0)
+
+            elif self.pos > 0:
+                if last_renko1.renko_direction == RenkoDirection.LONG and last_renko0.renko_direction == RenkoDirection.SHORT:
+                    self.set_position(pos=0)
+
+        elif self.current_ma_direction == RenkoDirection.SHORT:
+            if self.pos == 0:
+                if last_renko1.renko_direction == RenkoDirection.LONG and last_renko0.renko_direction == RenkoDirection.SHORT:
+                    self.set_position(pos=-1 * self.lots_size)
+
+            elif self.pos > 0:
+                if last_renko1.renko_direction == RenkoDirection.LONG and last_renko0.renko_direction == RenkoDirection.SHORT:
+                    self.set_position(pos=-1 * self.lots_size)
+                else:
+                    self.set_position(pos=0)
+
+            elif self.pos < 0:
+                if last_renko1.renko_direction == RenkoDirection.SHORT and last_renko0.renko_direction == RenkoDirection.LONG:
+                    self.set_position(pos=0)
+
+
+    def __update_params_ok(self, new_bar: BarData) -> bool:
+        if len(self.history_bars) < self.slow_window:
+            self.history_bars.append(new_bar)
+            self.bar_close_prices.append(new_bar.close_price)
+            return False
+
+        # update self.history_bars & self.bar_close_prices
+        self.history_bars.remove(self.history_bars[0])
+        self.history_bars.append(new_bar)
+
+        self.bar_close_prices.append(new_bar.close_price)
+
+
+        # update current_ma_direction & pre_ma_direction
+        self.__update_ma_direction()
+
+
+        # update renko_list | (renko_list & renko_size & lots_size)
+        if self.current_ma_direction != self.pre_ma_direction:
+            # reset renko_size
+            self.__reset_renko_size()
+
+            # reset lots_size
+            self.__reset_lots_size(pos=(self.strategy_fund * 0.05) / (4 * self.renko_size * self.min_tick_price_flow * self.contract_multiple))
+
+            # reset renko_list
+            self.renko_list, self.first_bar_close_price = [], 0
+            for new_bar_close_price in self.bar_close_prices:
+                self.__update_renko_list(new_bar_close_price=new_bar_close_price, renko_size=self.renko_size)
+        else:
+            # update renko_list
+            self.__update_renko_list(new_bar_close_price=new_bar.close_price, renko_size=self.renko_size)
+
+        return True
+
+
+    def __update_renko_list(self, new_bar_close_price: float, renko_size: int):
+        if len(self.renko_list) is 0:
+            if self.first_bar_close_price is 0:  # init strategy.
+                self.first_bar_close_price = new_bar_close_price
+            else:
+                """ 判断是否满足生成第一个renko的条件 """
+                ticks_diff = (new_bar_close_price - self.first_bar_close_price) / self.min_tick_price_flow
+                if ticks_diff > renko_size:
+                    """ 更新第一个renko为红色 """
+                    renko_counts = floor(ticks_diff / renko_size)
+                    renko_price = self.first_bar_close_price + renko_counts * renko_size * self.min_tick_price_flow
+                    self.renko_list.append(RenkoData(renko_price=renko_price, renko_direction=RenkoDirection.LONG, renko_value=renko_counts))
+
+                elif ticks_diff < -1 * renko_size:
+                    """ 更新第一个renko为绿色 """
+                    renko_counts = ceil(ticks_diff / renko_size)
+                    renko_price = self.first_bar_close_price + renko_counts * renko_size * self.min_tick_price_flow
+                    self.renko_list.append(RenkoData(renko_price=renko_price, renko_direction=RenkoDirection.SHORT, renko_value=renko_counts))
+
+        else:
+            last_renko = self.renko_list[-1]
+            ticks_diff = (new_bar_close_price - last_renko.renko_price) / self.min_tick_price_flow
+            if last_renko.renko_direction == RenkoDirection.LONG:  # 当前为红砖
+                if ticks_diff > renko_size:
+                    """ 新增红砖 """
+                    renko_counts = floor(ticks_diff / renko_size)
+                    renko_price = last_renko.renko_price + renko_counts * renko_size * self.min_tick_price_flow
+                    self.renko_list.append(RenkoData(renko_price=renko_price, renko_direction=RenkoDirection.LONG, renko_value=last_renko.renko_value+renko_counts))
+
+                elif ticks_diff < -2 * renko_size:
+                    """ 新增绿砖 """
+                    renko_counts = ceil(ticks_diff / renko_size)
+                    renko_price = last_renko.renko_price + renko_counts * renko_size * self.min_tick_price_flow
+                    self.renko_list.append(RenkoData(renko_price=renko_price, renko_direction=RenkoDirection.SHORT, renko_value=renko_counts+1))
+
+            elif last_renko.renko_direction == RenkoDirection.SHORT:  # 当前为绿砖
+                if ticks_diff < -1 * renko_size:
+                    """ 新增绿砖 """
+                    renko_counts = ceil(ticks_diff / renko_size)
+                    renko_price = last_renko.renko_price + renko_counts * renko_size * self.min_tick_price_flow
+                    self.renko_list.append(RenkoData(renko_price=renko_price, renko_direction=RenkoDirection.SHORT, renko_value=last_renko.renko_value+renko_counts))
+
+                elif ticks_diff > 2 * renko_size:
+                    """ 新增红砖 """
+                    renko_counts = floor(ticks_diff / renko_size)
+                    renko_price = last_renko.renko_price + renko_counts * renko_size * self.min_tick_price_flow
+                    self.renko_list.append(RenkoData(renko_price=renko_price, renko_direction=RenkoDirection.LONG, renko_value=renko_counts-1))
+
+
+    def __update_ma_direction(self):
+        # calculate fast ma value & slow ma value
+        fast_ma_value = sum(self.bar_close_prices[-self.fast_window:]) / self.fast_window
+        slow_ma_value = sum(self.bar_close_prices[-self.slow_window:]) / self.slow_window
+
+        # update self.pre_ma_direction & self.current_ma_direction
+        if fast_ma_value > slow_ma_value:
+            self.pre_ma_direction = self.current_ma_direction
+            self.current_ma_direction = RenkoDirection.LONG
+        elif fast_ma_value < slow_ma_value:
+            self.pre_ma_direction = self.current_ma_direction
+            self.current_ma_direction = RenkoDirection.SHORT
+
+    def __reset_renko_size(self):
+        trs = []
+        for bar in self.history_bars:
+            trs.append(bar.high_price - bar.low_price)
+
+        begin_index = floor(len(self.history_bars) * 0.1)
+        end_index = len(self.history_bars) - begin_index
+        avg_tr = sum(trs[begin_index:end_index]) / len(trs[begin_index:end_index])
+
+        self.renko_size = 0.5 * self.__get_std_avg_tr_ticks(avg_tr_ticks=int(avg_tr / self.min_tick_price_flow))
+
+    def __reset_lots_size(self, pos: float):
+        result_std_pos = floor(pos)
+        if result_std_pos is 0:  # set pos is 1 at least
+            result_std_pos = 1
+
+        self.lots_size = result_std_pos
+
+    @staticmethod
+    def __get_std_avg_tr_ticks(avg_tr_ticks: int, base_value: int = 10) -> int:
+        count = floor(avg_tr_ticks / base_value)
+        if avg_tr_ticks % base_value is 0:
+            return count * base_value
+        else:
+            return (count + 1) * base_value
+
+    def set_position(self, pos: int):
+        self.pos = pos
+
+
+    def on_init(self):
+        """
+        Callback when strategy is inited.
+        """
+        self.write_log(msg=f'strategy_name: {self.strategy_name}, fast_window: {self.fast_window}, slow_window: {self.slow_window}, contract_multiple: {self.contract_multiple}, min_tick_price_flow: {self.min_tick_price_flow}, strategy_fund: {self.strategy_fund}, lots_size: {self.lots_size}, renko_size: {self.renko_size}  on_init.')
+        pass
+
+    def on_start(self):
+        """
+        Callback when strategy is started.
+        """
+        self.write_log(msg=f'strategy_name: {self.strategy_name} on_start.')
+        pass
+
+    def on_stop(self):
+        self.write_log(msg=f'strategy_name: {self.strategy_name} on_stop.')

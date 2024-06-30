@@ -1,0 +1,206 @@
+{
+    "CFFEX.T.TQZFutureRenkoWaveAutoFundManageStrategy": {
+        "class_name": "TQZFutureRenkoWaveAutoFundManageStrategy",
+        "vt_symbol": "CFFEX.T",
+        "setting": {
+            "class_name": "TQZFutureRenkoWaveAutoFundManageStrategy",
+            "fast_window": 35,
+            "slow_window": 250,
+            "strategy_fund": 100000,
+            "min_tick_price_flow": 0.005,
+            "contract_multiple": 10000.0
+        }
+    },
+    "SHFE.au.TQZFutureRenkoWaveAutoFundManageStrategy": {
+        "class_name": "TQZFutureRenkoWaveAutoFundManageStrategy",
+        "vt_symbol": "SHFE.au",
+        "setting": {
+            "class_name": "TQZFutureRenkoWaveAutoFundManageStrategy",
+            "fast_window": 35,
+            "slow_window": 250,
+            "strategy_fund": 50000,
+            "min_tick_price_flow": 0.02,
+            "contract_multiple": 1000.0
+        }
+    },
+    "DCE.y.TQZFutureRenkoWaveAutoFundManageStrategy": {
+        "class_name": "TQZFutureRenkoWaveAutoFundManageStrategy",
+        "vt_symbol": "DCE.y",
+        "setting": {
+            "class_name": "TQZFutureRenkoWaveAutoFundManageStrategy",
+            "fast_window": 35,
+            "slow_window": 250,
+            "strategy_fund": 50000,
+            "min_tick_price_flow": 2.0,
+            "contract_multiple": 10.0
+        }
+    },
+    "DCE.p.TQZFutureRenkoWaveAutoFundManageStrategy": {
+        "class_name": "TQZFutureRenkoWaveAutoFundManageStrategy",
+        "vt_symbol": "DCE.p",
+        "setting": {
+            "class_name": "TQZFutureRenkoWaveAutoFundManageStrategy",
+            "fast_window": 35,
+            "slow_window": 250,
+            "strategy_fund": 50000,
+            "min_tick_price_flow": 2.0,
+            "contract_multiple": 10.0
+        }
+    },
+    "DCE.j.TQZFutureRenkoWaveAutoFundManageStrategy": {
+        "class_name": "TQZFutureRenkoWaveAutoFundManageStrategy",
+        "vt_symbol": "DCE.j",
+        "setting": {
+            "class_name": "TQZFutureRenkoWaveAutoFundManageStrategy",
+            "fast_window": 35,
+            "slow_window": 250,
+            "strategy_fund": 200000,
+            "min_tick_price_flow": 0.5,
+            "contract_multiple": 100.0
+        }
+    },
+    "DCE.c.TQZFutureRenkoWaveAutoFundManageStrategy": {
+        "class_name": "TQZFutureRenkoWaveAutoFundManageStrategy",
+        "vt_symbol": "DCE.c",
+        "setting": {
+            "class_name": "TQZFutureRenkoWaveAutoFundManageStrategy",
+            "fast_window": 35,
+            "slow_window": 250,
+            "strategy_fund": 50000,
+            "min_tick_price_flow": 1.0,
+            "contract_multiple": 10.0
+        }
+    },
+    "SHFE.al.TQZFutureRenkoWaveAutoFundManageStrategy": {
+        "class_name": "TQZFutureRenkoWaveAutoFundManageStrategy",
+        "vt_symbol": "SHFE.al",
+        "setting": {
+            "class_name": "TQZFutureRenkoWaveAutoFundManageStrategy",
+            "fast_window": 35,
+            "slow_window": 250,
+            "strategy_fund": 50000,
+            "min_tick_price_flow": 5.0,
+            "contract_multiple": 5.0
+        }
+    },
+    "CZCE.FG.TQZFutureRenkoWaveAutoFundManageStrategy": {
+        "class_name": "TQZFutureRenkoWaveAutoFundManageStrategy",
+        "vt_symbol": "CZCE.FG",
+        "setting": {
+            "class_name": "TQZFutureRenkoWaveAutoFundManageStrategy",
+            "fast_window": 35,
+            "slow_window": 250,
+            "strategy_fund": 50000,
+            "min_tick_price_flow": 1.0,
+            "contract_multiple": 20.0
+        }
+    },
+    "CZCE.SA.TQZFutureRenkoWaveAutoFundManageStrategy": {
+        "class_name": "TQZFutureRenkoWaveAutoFundManageStrategy",
+        "vt_symbol": "CZCE.SA",
+        "setting": {
+            "class_name": "TQZFutureRenkoWaveAutoFundManageStrategy",
+            "fast_window": 35,
+            "slow_window": 250,
+            "strategy_fund": 50000,
+            "min_tick_price_flow": 1.0,
+            "contract_multiple": 20.0
+        }
+    },
+    "INE.sc.TQZFutureRenkoWaveAutoFundManageStrategy": {
+        "class_name": "TQZFutureRenkoWaveAutoFundManageStrategy",
+        "vt_symbol": "INE.sc",
+        "setting": {
+            "class_name": "TQZFutureRenkoWaveAutoFundManageStrategy",
+            "fast_window": 35,
+            "slow_window": 250,
+            "strategy_fund": 250000,
+            "min_tick_price_flow": 0.1,
+            "contract_multiple": 1000.0
+        }
+    },
+    "DCE.v.TQZFutureRenkoWaveAutoFundManageStrategy": {
+        "class_name": "TQZFutureRenkoWaveAutoFundManageStrategy",
+        "vt_symbol": "DCE.v",
+        "setting": {
+            "class_name": "TQZFutureRenkoWaveAutoFundManageStrategy",
+            "fast_window": 35,
+            "slow_window": 250,
+            "strategy_fund": 50000,
+            "min_tick_price_flow": 1.0,
+            "contract_multiple": 5.0
+        }
+    },
+    "SHFE.bu.TQZFutureRenkoWaveAutoFundManageStrategy": {
+        "class_name": "TQZFutureRenkoWaveAutoFundManageStrategy",
+        "vt_symbol": "SHFE.bu",
+        "setting": {
+            "class_name": "TQZFutureRenkoWaveAutoFundManageStrategy",
+            "fast_window": 35,
+            "slow_window": 250,
+            "strategy_fund": 50000,
+            "min_tick_price_flow": 2.0,
+            "contract_multiple": 10.0
+        }
+    },
+    "DCE.lh.TQZFutureRenkoWaveAutoFundManageStrategy": {
+        "class_name": "TQZFutureRenkoWaveAutoFundManageStrategy",
+        "vt_symbol": "DCE.lh",
+        "setting": {
+            "class_name": "TQZFutureRenkoWaveAutoFundManageStrategy",
+            "fast_window": 35,
+            "slow_window": 250,
+            "strategy_fund": 50000,
+            "min_tick_price_flow": 5.0,
+            "contract_multiple": 16.0
+        }
+    },
+    "SHFE.sp.TQZFutureRenkoWaveAutoFundManageStrategy": {
+        "class_name": "TQZFutureRenkoWaveAutoFundManageStrategy",
+        "vt_symbol": "SHFE.sp",
+        "setting": {
+            "class_name": "TQZFutureRenkoWaveAutoFundManageStrategy",
+            "fast_window": 35,
+            "slow_window": 250,
+            "strategy_fund": 50000,
+            "min_tick_price_flow": 2.0,
+            "contract_multiple": 10.0
+        }
+    },
+    "DCE.a.TQZFutureRenkoWaveAutoFundManageStrategy": {
+        "class_name": "TQZFutureRenkoWaveAutoFundManageStrategy",
+        "vt_symbol": "DCE.a",
+        "setting": {
+            "class_name": "TQZFutureRenkoWaveAutoFundManageStrategy",
+            "fast_window": 35,
+            "slow_window": 250,
+            "strategy_fund": 50000,
+            "min_tick_price_flow": 1.0,
+            "contract_multiple": 10.0
+        }
+    },
+    "SHFE.ss.TQZFutureRenkoWaveAutoFundManageStrategy": {
+        "class_name": "TQZFutureRenkoWaveAutoFundManageStrategy",
+        "vt_symbol": "SHFE.ss",
+        "setting": {
+            "class_name": "TQZFutureRenkoWaveAutoFundManageStrategy",
+            "fast_window": 35,
+            "slow_window": 250,
+            "strategy_fund": 50000,
+            "min_tick_price_flow": 5.0,
+            "contract_multiple": 5.0
+        }
+    },
+    "DCE.eb.TQZFutureRenkoWaveAutoFundManageStrategy": {
+        "class_name": "TQZFutureRenkoWaveAutoFundManageStrategy",
+        "vt_symbol": "DCE.eb",
+        "setting": {
+            "class_name": "TQZFutureRenkoWaveAutoFundManageStrategy",
+            "fast_window": 35,
+            "slow_window": 250,
+            "strategy_fund": 50000,
+            "min_tick_price_flow": 1.0,
+            "contract_multiple": 5.0
+        }
+    }
+}

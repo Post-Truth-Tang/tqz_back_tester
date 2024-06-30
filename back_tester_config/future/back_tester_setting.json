@@ -1,0 +1,22 @@
+{
+    "tq_main_contracts": [
+        "KQ.m@CFFEX.T",
+        "KQ.m@SHFE.au",
+        "KQ.m@DCE.y",
+        "KQ.m@DCE.p",
+        "KQ.m@DCE.j",
+        "KQ.m@DCE.c",
+        "KQ.m@SHFE.al",
+        "KQ.m@CZCE.FG",
+        "KQ.m@CZCE.SA",
+        "KQ.m@INE.sc",
+        "KQ.m@DCE.v",
+        "KQ.m@SHFE.bu",
+        "KQ.m@DCE.lh",
+        "KQ.m@SHFE.sp",
+        "KQ.m@DCE.a",
+        "KQ.m@SHFE.ss",
+        "KQ.m@DCE.eb"
+    ],
+    "future_strategy_template": "TQZFutureRenkoWaveAutoFundManageStrategy"
+}

@@ -1,0 +1,282 @@
+{
+    "CZCE.MA": {
+        "min_tick_price_flow": 1.0,
+        "contract_multiple": 10.0
+    },
+    "DCE.l": {
+        "min_tick_price_flow": 1.0,
+        "contract_multiple": 5.0
+    },
+    "SHFE.wr": {
+        "min_tick_price_flow": 1.0,
+        "contract_multiple": 10.0
+    },
+    "CZCE.CF": {
+        "min_tick_price_flow": 5.0,
+        "contract_multiple": 5.0
+    },
+    "CZCE.FG": {
+        "min_tick_price_flow": 1.0,
+        "contract_multiple": 20.0
+    },
+    "DCE.jm": {
+        "min_tick_price_flow": 0.5,
+        "contract_multiple": 60.0
+    },
+    "DCE.fb": {
+        "min_tick_price_flow": 0.5,
+        "contract_multiple": 10.0
+    },
+    "CZCE.PM": {
+        "min_tick_price_flow": 1.0,
+        "contract_multiple": 50.0
+    },
+    "DCE.j": {
+        "min_tick_price_flow": 0.5,
+        "contract_multiple": 100.0
+    },
+    "DCE.cs": {
+        "min_tick_price_flow": 1.0,
+        "contract_multiple": 10.0
+    },
+    "DCE.b": {
+        "min_tick_price_flow": 1.0,
+        "contract_multiple": 10.0
+    },
+    "DCE.y": {
+        "min_tick_price_flow": 2.0,
+        "contract_multiple": 10.0
+    },
+    "CZCE.AP": {
+        "min_tick_price_flow": 1.0,
+        "contract_multiple": 10.0
+    },
+    "DCE.pp": {
+        "min_tick_price_flow": 1.0,
+        "contract_multiple": 5.0
+    },
+    "DCE.jd": {
+        "min_tick_price_flow": 1.0,
+        "contract_multiple": 10.0
+    },
+    "INE.nr": {
+        "min_tick_price_flow": 5.0,
+        "contract_multiple": 10.0
+    },
+    "SHFE.pb": {
+        "min_tick_price_flow": 5.0,
+        "contract_multiple": 5.0
+    },
+    "DCE.p": {
+        "min_tick_price_flow": 2.0,
+        "contract_multiple": 10.0
+    },
+    "DCE.pg": {
+        "min_tick_price_flow": 1.0,
+        "contract_multiple": 20.0
+    },
+    "CZCE.PK": {
+        "min_tick_price_flow": 2.0,
+        "contract_multiple": 5.0
+    },
+    "CZCE.PF": {
+        "min_tick_price_flow": 2.0,
+        "contract_multiple": 5.0
+    },
+    "INE.sc": {
+        "min_tick_price_flow": 0.1,
+        "contract_multiple": 1000.0
+    },
+    "SHFE.au": {
+        "min_tick_price_flow": 0.02,
+        "contract_multiple": 1000.0
+    },
+    "CZCE.SF": {
+        "min_tick_price_flow": 2.0,
+        "contract_multiple": 5.0
+    },
+    "DCE.eb": {
+        "min_tick_price_flow": 1.0,
+        "contract_multiple": 5.0
+    },
+    "CFFEX.T": {
+        "min_tick_price_flow": 0.005,
+        "contract_multiple": 10000.0
+    },
+    "CZCE.ZC": {
+        "min_tick_price_flow": 0.2,
+        "contract_multiple": 100.0
+    },
+    "SHFE.bu": {
+        "min_tick_price_flow": 2.0,
+        "contract_multiple": 10.0
+    },
+    "CFFEX.TF": {
+        "min_tick_price_flow": 0.005,
+        "contract_multiple": 10000.0
+    },
+    "SHFE.sn": {
+        "min_tick_price_flow": 10.0,
+        "contract_multiple": 1.0
+    },
+    "DCE.rr": {
+        "min_tick_price_flow": 1.0,
+        "contract_multiple": 10.0
+    },
+    "DCE.c": {
+        "min_tick_price_flow": 1.0,
+        "contract_multiple": 10.0
+    },
+    "CZCE.RI": {
+        "min_tick_price_flow": 1.0,
+        "contract_multiple": 20.0
+    },
+    "SHFE.rb": {
+        "min_tick_price_flow": 1.0,
+        "contract_multiple": 10.0
+    },
+    "SHFE.ag": {
+        "min_tick_price_flow": 1.0,
+        "contract_multiple": 15.0
+    },
+    "SHFE.ss": {
+        "min_tick_price_flow": 5.0,
+        "contract_multiple": 5.0
+    },
+    "SHFE.al": {
+        "min_tick_price_flow": 5.0,
+        "contract_multiple": 5.0
+    },
+    "DCE.i": {
+        "min_tick_price_flow": 0.5,
+        "contract_multiple": 100.0
+    },
+    "CZCE.RM": {
+        "min_tick_price_flow": 1.0,
+        "contract_multiple": 10.0
+    },
+    "CZCE.CJ": {
+        "min_tick_price_flow": 5.0,
+        "contract_multiple": 5.0
+    },
+    "DCE.m": {
+        "min_tick_price_flow": 1.0,
+        "contract_multiple": 10.0
+    },
+    "CZCE.UR": {
+        "min_tick_price_flow": 1.0,
+        "contract_multiple": 20.0
+    },
+    "SHFE.cu": {
+        "min_tick_price_flow": 10.0,
+        "contract_multiple": 5.0
+    },
+    "SHFE.sp": {
+        "min_tick_price_flow": 2.0,
+        "contract_multiple": 10.0
+    },
+    "SHFE.zn": {
+        "min_tick_price_flow": 5.0,
+        "contract_multiple": 5.0
+    },
+    "INE.lu": {
+        "min_tick_price_flow": 1.0,
+        "contract_multiple": 10.0
+    },
+    "DCE.v": {
+        "min_tick_price_flow": 1.0,
+        "contract_multiple": 5.0
+    },
+    "DCE.eg": {
+        "min_tick_price_flow": 1.0,
+        "contract_multiple": 10.0
+    },
+    "SHFE.ni": {
+        "min_tick_price_flow": 10.0,
+        "contract_multiple": 1.0
+    },
+    "SHFE.fu": {
+        "min_tick_price_flow": 1.0,
+        "contract_multiple": 10.0
+    },
+    "CFFEX.IH": {
+        "min_tick_price_flow": 0.2,
+        "contract_multiple": 300.0
+    },
+    "DCE.bb": {
+        "min_tick_price_flow": 0.05,
+        "contract_multiple": 500.0
+    },
+    "SHFE.hc": {
+        "min_tick_price_flow": 1.0,
+        "contract_multiple": 10.0
+    },
+    "INE.bc": {
+        "min_tick_price_flow": 10.0,
+        "contract_multiple": 5.0
+    },
+    "CZCE.SA": {
+        "min_tick_price_flow": 1.0,
+        "contract_multiple": 20.0
+    },
+    "SHFE.ru": {
+        "min_tick_price_flow": 5.0,
+        "contract_multiple": 10.0
+    },
+    "CZCE.SM": {
+        "min_tick_price_flow": 2.0,
+        "contract_multiple": 5.0
+    },
+    "CZCE.TA": {
+        "min_tick_price_flow": 2.0,
+        "contract_multiple": 5.0
+    },
+    "CZCE.JR": {
+        "min_tick_price_flow": 1.0,
+        "contract_multiple": 20.0
+    },
+    "DCE.lh": {
+        "min_tick_price_flow": 5.0,
+        "contract_multiple": 16.0
+    },
+    "CFFEX.IF": {
+        "min_tick_price_flow": 0.2,
+        "contract_multiple": 300.0
+    },
+    "CZCE.WH": {
+        "min_tick_price_flow": 1.0,
+        "contract_multiple": 20.0
+    },
+    "CZCE.SR": {
+        "min_tick_price_flow": 1.0,
+        "contract_multiple": 10.0
+    },
+    "CZCE.OI": {
+        "min_tick_price_flow": 1.0,
+        "contract_multiple": 10.0
+    },
+    "CZCE.LR": {
+        "min_tick_price_flow": 1.0,
+        "contract_multiple": 20.0
+    },
+    "CZCE.CY": {
+        "min_tick_price_flow": 5.0,
+        "contract_multiple": 5.0
+    },
+    "CFFEX.IC": {
+        "min_tick_price_flow": 0.2,
+        "contract_multiple": 200.0
+    },
+    "CFFEX.TS": {
+        "min_tick_price_flow": 0.005,
+        "contract_multiple": 20000.0
+    },
+    "CZCE.RS": {
+        "min_tick_price_flow": 1.0,
+        "contract_multiple": 10.0
+    },
+    "DCE.a": {
+        "min_tick_price_flow": 1.0,
+        "contract_multiple": 10.0
+    }
+}

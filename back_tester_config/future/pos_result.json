@@ -1,0 +1,186 @@
+{
+    "CFFEX.IF": {
+        "std_pos": 1,
+        "renko_size": 70.0
+    },
+    "CFFEX.T": {
+        "std_pos": 1,
+        "renko_size": 10.0
+    },
+    "SHFE.rb": {
+        "std_pos": 1,
+        "renko_size": 15.0
+    },
+    "SHFE.au": {
+        "std_pos": 1,
+        "renko_size": 25.0
+    },
+    "SHFE.cu": {
+        "std_pos": 1,
+        "renko_size": 10.0
+    },
+    "DCE.i": {
+        "std_pos": 1,
+        "renko_size": 10.0
+    },
+    "DCE.m": {
+        "std_pos": 2,
+        "renko_size": 10.0
+    },
+    "CZCE.CF": {
+        "std_pos": 1,
+        "renko_size": 10.0
+    },
+    "DCE.y": {
+        "std_pos": 1,
+        "renko_size": 15.0
+    },
+    "CZCE.TA": {
+        "std_pos": 2,
+        "renko_size": 10.0
+    },
+    "SHFE.ag": {
+        "std_pos": 1,
+        "renko_size": 10.0
+    },
+    "DCE.p": {
+        "std_pos": 1,
+        "renko_size": 15.0
+    },
+    "SHFE.hc": {
+        "std_pos": 1,
+        "renko_size": 15.0
+    },
+    "SHFE.ru": {
+        "std_pos": 1,
+        "renko_size": 10.0
+    },
+    "DCE.j": {
+        "std_pos": 1,
+        "renko_size": 20.0
+    },
+    "CZCE.MA": {
+        "std_pos": 2,
+        "renko_size": 10.0
+    },
+    "CZCE.SR": {
+        "std_pos": 1,
+        "renko_size": 15.0
+    },
+    "DCE.c": {
+        "std_pos": 5,
+        "renko_size": 5.0
+    },
+    "SHFE.al": {
+        "std_pos": 1,
+        "renko_size": 10.0
+    },
+    "SHFE.ni": {
+        "std_pos": 1,
+        "renko_size": 40.0
+    },
+    "CZCE.OI": {
+        "std_pos": 1,
+        "renko_size": 25.0
+    },
+    "CZCE.FG": {
+        "std_pos": 1,
+        "renko_size": 10.0
+    },
+    "CZCE.SA": {
+        "std_pos": 1,
+        "renko_size": 10.0
+    },
+    "INE.sc": {
+        "std_pos": 1,
+        "renko_size": 15.0
+    },
+    "DCE.v": {
+        "std_pos": 2,
+        "renko_size": 25.0
+    },
+    "CZCE.AP": {
+        "std_pos": 1,
+        "renko_size": 35.0
+    },
+    "DCE.pp": {
+        "std_pos": 2,
+        "renko_size": 25.0
+    },
+    "DCE.jm": {
+        "std_pos": 1,
+        "renko_size": 15.0
+    },
+    "DCE.l": {
+        "std_pos": 2,
+        "renko_size": 25.0
+    },
+    "CZCE.RM": {
+        "std_pos": 2,
+        "renko_size": 10.0
+    },
+    "SHFE.bu": {
+        "std_pos": 1,
+        "renko_size": 10.0
+    },
+    "DCE.eg": {
+        "std_pos": 1,
+        "renko_size": 20.0
+    },
+    "SHFE.zn": {
+        "std_pos": 1,
+        "renko_size": 10.0
+    },
+    "DCE.lh": {
+        "std_pos": 1,
+        "renko_size": 20.0
+    },
+    "SHFE.sp": {
+        "std_pos": 1,
+        "renko_size": 10.0
+    },
+    "CZCE.ZC": {
+        "std_pos": 1,
+        "renko_size": 10.0
+    },
+    "SHFE.fu": {
+        "std_pos": 2,
+        "renko_size": 10.0
+    },
+    "SHFE.sn": {
+        "std_pos": 1,
+        "renko_size": 40.0
+    },
+    "CZCE.SF": {
+        "std_pos": 1,
+        "renko_size": 15.0
+    },
+    "DCE.a": {
+        "std_pos": 1,
+        "renko_size": 15.0
+    },
+    "DCE.jd": {
+        "std_pos": 1,
+        "renko_size": 15.0
+    },
+    "CZCE.SM": {
+        "std_pos": 1,
+        "renko_size": 15.0
+    },
+    "SHFE.ss": {
+        "std_pos": 1,
+        "renko_size": 10.0
+    },
+    "DCE.eb": {
+        "std_pos": 1,
+        "renko_size": 35.0
+    },
+    "DCE.pg": {
+        "std_pos": 1,
+        "renko_size": 25.0
+    },
+    "CZCE.PF": {
+        "std_pos": 1,
+        "renko_size": 15.0
+    }
+}

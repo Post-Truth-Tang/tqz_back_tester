@@ -1,0 +1,13 @@
+{
+    "start_date": "2012-04-30",
+    "end_date": "2022-04-30",
+    "interval": "daily",
+    "stock_strategy_templates": [
+        "TQZStockRenkoWaveAutoFundManageStrategy",
+        "TQZStockRenkoScalpingAutoFundManageStrategy"
+    ],
+    "strategy_fund": 50000,
+    "slippage": 2,
+    "fee_ratio": 0.001,
+    "tick_value": 0.01
+}

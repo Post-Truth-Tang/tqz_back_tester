@@ -1,0 +1,92 @@
+{
+    "CFFEX.T.TQZFutureRenkoWaveAutoFundManageStrategy": {
+        "max_net_value_drop_down": -0.249,
+        "sharpe_ratio": 0.2508,
+        "profit_risk_ratio": 1.6647
+    },
+    "SHFE.au.TQZFutureRenkoWaveAutoFundManageStrategy": {
+        "max_net_value_drop_down": -1.17,
+        "sharpe_ratio": 0.3893,
+        "profit_risk_ratio": 1.6156
+    },
+    "DCE.y.TQZFutureRenkoWaveAutoFundManageStrategy": {
+        "max_net_value_drop_down": -0.4904,
+        "sharpe_ratio": 0.6491,
+        "profit_risk_ratio": 2.9698
+    },
+    "DCE.p.TQZFutureRenkoWaveAutoFundManageStrategy": {
+        "max_net_value_drop_down": -0.3128,
+        "sharpe_ratio": 0.7352,
+        "profit_risk_ratio": 5.5665
+    },
+    "DCE.j.TQZFutureRenkoWaveAutoFundManageStrategy": {
+        "max_net_value_drop_down": -0.321,
+        "sharpe_ratio": 0.6211,
+        "profit_risk_ratio": 4.1698
+    },
+    "DCE.c.TQZFutureRenkoWaveAutoFundManageStrategy": {
+        "max_net_value_drop_down": -0.2184,
+        "sharpe_ratio": 1.0223,
+        "profit_risk_ratio": 7.8791
+    },
+    "SHFE.al.TQZFutureRenkoWaveAutoFundManageStrategy": {
+        "max_net_value_drop_down": -0.3275,
+        "sharpe_ratio": 1.029,
+        "profit_risk_ratio": 6.1267
+    },
+    "CZCE.FG.TQZFutureRenkoWaveAutoFundManageStrategy": {
+        "max_net_value_drop_down": -0.312,
+        "sharpe_ratio": 1.2502,
+        "profit_risk_ratio": 7.6641
+    },
+    "CZCE.SA.TQZFutureRenkoWaveAutoFundManageStrategy": {
+        "max_net_value_drop_down": -0.6632,
+        "sharpe_ratio": 0.9202,
+        "profit_risk_ratio": 2.497
+    },
+    "INE.sc.TQZFutureRenkoWaveAutoFundManageStrategy": {
+        "max_net_value_drop_down": -0.6088,
+        "sharpe_ratio": 0.6522,
+        "profit_risk_ratio": 3.23
+    },
+    "DCE.v.TQZFutureRenkoWaveAutoFundManageStrategy": {
+        "max_net_value_drop_down": -0.579,
+        "sharpe_ratio": 0.8427,
+        "profit_risk_ratio": 3.1895
+    },
+    "SHFE.bu.TQZFutureRenkoWaveAutoFundManageStrategy": {
+        "max_net_value_drop_down": -0.3996,
+        "sharpe_ratio": 0.5194,
+        "profit_risk_ratio": 2.3413
+    },
+    "DCE.lh.TQZFutureRenkoWaveAutoFundManageStrategy": {
+        "max_net_value_drop_down": -0.5696,
+        "sharpe_ratio": 1.7376,
+        "profit_risk_ratio": 5.9719
+    },
+    "SHFE.sp.TQZFutureRenkoWaveAutoFundManageStrategy": {
+        "max_net_value_drop_down": -0.4176,
+        "sharpe_ratio": 0.524,
+        "profit_risk_ratio": 2.3975
+    },
+    "DCE.a.TQZFutureRenkoWaveAutoFundManageStrategy": {
+        "max_net_value_drop_down": -0.3792,
+        "sharpe_ratio": 0.5074,
+        "profit_risk_ratio": 2.875
+    },
+    "SHFE.ss.TQZFutureRenkoWaveAutoFundManageStrategy": {
+        "max_net_value_drop_down": -0.247,
+        "sharpe_ratio": 0.6,
+        "profit_risk_ratio": 3.5182
+    },
+    "DCE.eb.TQZFutureRenkoWaveAutoFundManageStrategy": {
+        "max_net_value_drop_down": -0.3588,
+        "sharpe_ratio": 1.1462,
+        "profit_risk_ratio": 6.0067
+    },
+    "TQZFutureRenkoWaveAutoFundManageStrategy": {
+        "max_net_value_drop_down": -0.2188,
+        "sharpe_ratio": 1.5266,
+        "profit_risk_ratio": 7.3449
+    }
+}
